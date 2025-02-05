@@ -21,12 +21,10 @@ function showToast(message) {
     toast.style.fontSize = "14px";
     toast.style.boxShadow = "0px 4px 6px rgba(0,0,0,0.3)";
 
-    // Use chrome.runtime.getURL() to get the icon path inside the extension
     let iconURL = chrome.runtime.getURL("icons/WuIcon.png"); 
 
-    // Insert extension icon
     let icon = document.createElement("img");
-    icon.src = iconURL; // ✅ Using the extension's internal resource
+    icon.src = iconURL;
     icon.style.width = "18px";
     icon.style.height = "18px";
     icon.style.marginRight = "8px";
@@ -87,8 +85,8 @@ function disableKeyListener() {
 
 // Handle keyboard input
 function keyControl(event) {
-    let currentTime = Date.now(); // Record the current time
-    
+    let currentTime = Date.now(); 
+
     if (event.key === ' ') { // Space key to pause/resume scrolling
         event.preventDefault();
         if (isScrolling) {
@@ -97,26 +95,27 @@ function keyControl(event) {
             showToast("Stopped Scrolling");
         } else {
             startScrolling();
+            showToast("Resumed Scrolling");
         }
     } else if (event.key === 'ArrowDown') { // ↓ Increase speed
+        if (!isScrolling) startScrolling(); // Restart scrolling if paused
         scrollSpeed += 2;
         keyPressCount++;
 
-        // Show toast only if pressed 10 times or after 5 seconds
         if (keyPressCount >= 10 || (currentTime - lastToastTime > 5000)) {
-            showToast("Speeding Up >>>");
-            keyPressCount = 0; // Reset counter
-            lastToastTime = currentTime; // Record toast time
+            showToast(`Speeding Up >>> (${scrollSpeed}px/s)`);
+            keyPressCount = 0;
+            lastToastTime = currentTime;
         }
     } else if (event.key === 'ArrowUp') { // ↑ Decrease speed
-        scrollSpeed = scrollSpeed - 2;
+        if (!isScrolling) startScrolling(); // Restart scrolling if paused
+        scrollSpeed = scrollSpeed - 2; // Prevent speed from going to 0
         keyPressCount++;
 
-        // Show toast only if pressed 10 times or after 5 seconds
         if (keyPressCount >= 10 || (currentTime - lastToastTime > 5000)) {
-            showToast("Speeding Down <<<");
-            keyPressCount = 0; // Reset counter
-            lastToastTime = currentTime; // Record toast time
+            showToast(`Speeding Down <<< (${scrollSpeed}px/s)`);
+            keyPressCount = 0;
+            lastToastTime = currentTime;
         }
     } else if (event.ctrlKey && event.key.toLowerCase() === 'm') { // Ctrl + M to mark reading position
         let scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
