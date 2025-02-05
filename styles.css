@@ -1,0 +1,74 @@
+/* Background, shadow, and border-radius optimization */
+body {
+    font-family: Arial, sans-serif;
+    width: 150px;
+    padding: 15px;
+    background-color: #252525;  /* Dark background */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    text-align: center;
+    color: #EEEBD3; /* Elegant beige text color */
+}
+
+/* Title styles */
+h3 {
+    margin-bottom: 12px;
+    color: #EEEBD3; /* Title text color */
+    font-weight: bold;
+}
+
+/* Slider label */
+label {
+    display: block;
+    margin: 10px 0;
+    font-size: 14px;
+    color: #EEEBD3;
+}
+
+/* Slider styles */
+input[type="range"] {
+    width: 100%;
+    -webkit-appearance: none;
+    background: #255957; /* Dark gray track */
+    height: 4px;
+    border-radius: 5px;
+    outline: none;
+    margin-top: 8px;
+}
+
+/* Slider thumb (draggable circle) */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 12px;
+    height: 12px;
+    background: #EEEBD3; /* Beige slider button */
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* General button styles */
+button {
+    width: 100%;
+    padding: 6px;
+    margin-top: 6px;
+    border: none;
+    border-radius: 6px;
+    background-color: #255957; /* Dark gray button */
+    color: #EEEBD3;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); /* Button shadow */
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #37796F; /* Slightly brighter greenish-gray */
+}
+
+/* Button click effect */
+button:active {
+    transform: scale(0.96);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6);
+}

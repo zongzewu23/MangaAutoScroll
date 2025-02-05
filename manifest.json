@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Manga Auto Scroll",
+  "version": "1.0",
+  "description": "Automatically scroll comic pages to make reading smoother.",
+  "permissions": ["activeTab", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/WuHappy.png",
+      "48": "icons/WuHappy.png",
+      "128": "icons/WuHappy.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
