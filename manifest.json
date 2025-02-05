@@ -3,7 +3,7 @@
   "name": "Manga Auto Scroll",
   "version": "1.0",
   "description": "Automatically scroll comic pages to make reading smoother.",
-  "permissions": ["activeTab", "storage"],
+  "permissions": ["activeTab", "storage", "scripting"],
   "host_permissions": ["<all_urls>"],
   "action": {
     "default_popup": "popup.html",
@@ -11,7 +11,10 @@
       "16": "icons/WuIcon.png",
       "48": "icons/WuIcon.png",
       "128": "icons/WuIcon.png"
-    }
+    },
+  "homepage_url": "https://zongzewu23.github.io/MangaAutoScroll/",
+  "privacy_policy_url": "https://zongzewu23.github.io/MangaAutoScroll/privacy_policy.html"
+
   },
   "web_accessible_resources": [
     {

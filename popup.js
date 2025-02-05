@@ -1,9 +1,15 @@
 console.log("content.js is running...");
 document.getElementById('start').addEventListener('click', () => {
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+        if (tabs.length === 0) {
+            console.error("No active tabs found.");
+            return;
+        }
         chrome.tabs.sendMessage(tabs[0].id, { action: "start" });
     });
 });
+
+
 
 document.getElementById('stop').addEventListener('click', () => {
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
