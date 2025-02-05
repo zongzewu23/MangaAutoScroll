@@ -72,3 +72,15 @@ button:active {
     transform: scale(0.96);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6);
 }
+
+
+#usage {
+    font-size: 8px;
+    color: #ccc;
+}
+
+ul {
+    text-align: left;
+    font-size: 8px;
+    color: #ccc;
+}

@@ -5,7 +5,11 @@ document.getElementById('start').addEventListener('click', () => {
             console.error("No active tabs found.");
             return;
         }
-        chrome.tabs.sendMessage(tabs[0].id, { action: "start" });
+        chrome.tabs.sendMessage(tabs[0].id, { action: "start" }, (response) => {
+            if (chrome.runtime.lastError) {
+                console.warn("Script injection failed: ", chrome.runtime.lastError.message);
+            }
+        });
     });
 });
 
