@@ -3,14 +3,14 @@
   "name": "Manga Auto Scroll",
   "version": "1.0",
   "description": "Manga Auto Scroll is a simple extension that allows you to automatically scroll manga pages for a smoother reading experience.",
-  "permissions": ["activeTab", "storage", "scripting"],
+  "permissions": ["activeTab","scripting"],
   "host_permissions": ["http://*/*", "https://*/*"],
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
-      "16": "icons/WuIcon.png",
-      "48": "icons/WuIcon.png",
-      "128": "icons/WuIcon.png"
+      "16": "icons/icon.png",
+      "48": "icons/icon.png",
+      "128": "icons/icon.png"
     },
   "homepage_url": "https://zongzewu23.github.io/MangaAutoScroll/",
   "privacy_policy_url": "https://zongzewu23.github.io/MangaAutoScroll/privacy_policy.html"
@@ -18,7 +18,7 @@
   },
   "web_accessible_resources": [
     {
-      "resources": ["icons/WuIcon.png"],
+      "resources": ["icons/icon.png"],
       "matches": ["<all_urls>"]
     }
   ],

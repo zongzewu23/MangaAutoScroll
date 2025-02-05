@@ -21,7 +21,7 @@ function showToast(message) {
     toast.style.fontSize = "14px";
     toast.style.boxShadow = "0px 4px 6px rgba(0,0,0,0.3)";
 
-    let iconURL = chrome.runtime.getURL("icons/WuIcon.png"); 
+    let iconURL = chrome.runtime.getURL("icons/icon.png"); 
 
     let icon = document.createElement("img");
     icon.src = iconURL;
