@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Manga Auto Scroll",
   "version": "1.0",
-  "description": "Manga Auto Scroll is a simple extension that allows you to automatically scroll manga pages for a smoother reading experience. You can control the scrolling speed with keyboard shortcuts or adjust it in the extension popup.",
+  "description": "Manga Auto Scroll is a simple extension that allows you to automatically scroll manga pages for a smoother reading experience.",
   "permissions": ["activeTab", "storage", "scripting"],
   "host_permissions": ["http://*/*", "https://*/*"],
   "action": {
