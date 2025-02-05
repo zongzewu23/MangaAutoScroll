@@ -8,11 +8,17 @@
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
-      "16": "icons/WuHappy.png",
-      "48": "icons/WuHappy.png",
-      "128": "icons/WuHappy.png"
+      "16": "icons/WuIcon.png",
+      "48": "icons/WuIcon.png",
+      "128": "icons/WuIcon.png"
     }
   },
+  "web_accessible_resources": [
+    {
+      "resources": ["icons/WuIcon.png"],
+      "matches": ["<all_urls>"]
+    }
+  ],
   "content_scripts": [
     {
       "matches": ["<all_urls>"],

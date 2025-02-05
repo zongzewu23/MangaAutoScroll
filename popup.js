@@ -1,6 +1,4 @@
 console.log("content.js is running...");
-
-
 document.getElementById('start').addEventListener('click', () => {
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
         chrome.tabs.sendMessage(tabs[0].id, { action: "start" });
@@ -19,6 +17,7 @@ document.getElementById('speedControl').addEventListener('input', (event) => {
         chrome.tabs.sendMessage(tabs[0].id, { action: "setSpeed", speed: speed });
     });
 });
+
 
 
 function startScrolling() {
